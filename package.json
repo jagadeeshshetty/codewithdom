@@ -1,0 +1,18 @@
+{
+  "name": "dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "debug": "node --inspect-brk node_modules/nightwatch/bin/nightwatch",
+    "chromedriver": "chromedriver -v",
+    "test": "nightwatch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^77.0.0",
+    "nightwatch": "^1.2.4"
+  }
+}
