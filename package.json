@@ -7,12 +7,19 @@
     "lint": "eslint .",
     "debug": "node --inspect-brk node_modules/nightwatch/bin/nightwatch",
     "chromedriver": "chromedriver -v",
-    "test": "nightwatch"
+    "test": "nightwatch",
+    "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
+    "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
+    "consolidate:vrt": "setx CONSOLIDATE 1 && npm run test:vrt",
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^77.0.0",
     "nightwatch": "^1.2.4"
+  },
+  "dependencies": {
+    "nightwatch-vrt": "^0.2.10"
   }
 }
