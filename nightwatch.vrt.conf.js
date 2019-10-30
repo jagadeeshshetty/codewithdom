@@ -19,11 +19,6 @@ function generateScreenshotFilePath(nightwatchClient, basePath, fileName) {
     return path.join(process.cwd(), basePath, moduleName, testName, fileName);
 }
 
-console.log(process.env.X === 1);
-console.log(process.env.X);
-console.log(typeof process.env.X);
-console.log(process.env.OS);
-
 config.test_settings.default.globals = {
     'visual_regression_settings': {
         'generate_screenshot_path': generateScreenshotFilePath,
@@ -35,7 +30,7 @@ config.test_settings.default.globals = {
         'diff_suffix': '',
         'threshold': 0,
         'prompt': false,
-        'always_save_diff_screenshot': process.env.X == '1'
+        'always_save_diff_screenshot': process.env.CONSOLIDATE == '1'
     }
 };
 
